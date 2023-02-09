@@ -1,0 +1,401 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
+        AllowsTransparency="True"
+        Background="Transparent"
+        Title="MainWindow" Height="780" Width="1080">
+    <Window.Resources>
+        <Style x:Key="we" TargetType="Button">
+            <Setter Property="Background" Value="#73a1fe"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#6ad5fd"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <Style x:Key="qw" TargetType="Button">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#202039"/>
+
+                </Trigger>
+            </Style.Triggers>
+
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="3*"/>
+            </Grid.ColumnDefinitions>
+            <Border Panel.ZIndex="1"  Background="#353055" CornerRadius="15,0,0,15">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition Height="4*"/>
+                    </Grid.RowDefinitions>
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                        <TextBlock  Text="&#xe67b;"  FontFamily="/WpfApp1;component/Fonts/#iconfont"  VerticalAlignment="Center" Foreground="White" FontSize="36"/>
+                        <TextBlock Text="钱包夹" Margin="10,0,0,0" Foreground="White" FontSize="23" FontWeight="Bold" VerticalAlignment="Center"/>
+                    </StackPanel>
+
+                    <Grid Grid.Row="1">
+                        <StackPanel>
+                            <Button Margin="20,20,-20,10" Background="#21203b">
+                                <Button.Template>
+                                    <ControlTemplate TargetType="{x:Type Button}">
+                                        <Border BorderThickness="0" BorderBrush="Black" CornerRadius="25" Background="{TemplateBinding Background}">
+                                            <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                        </Border>
+                                    </ControlTemplate>
+                                </Button.Template>
+                                <StackPanel Margin="-70,10,0,10" Orientation="Horizontal" >
+                                    <TextBlock  Text="&#xe67b;"  FontFamily="/WpfApp1;component/Fonts/#iconfont"  VerticalAlignment="Center" Foreground="White" FontSize="36"/>
+                                    <TextBlock Text="钱包" Margin="20,0,0,0" Foreground="White" FontSize="20"  VerticalAlignment="Center"/>
+                                </StackPanel>
+                            </Button>
+                            <Button Style="{StaticResource qw}" Margin="0,10,0,10">
+                                <Button.Template>
+                                    <ControlTemplate TargetType="{x:Type Button}">
+                                        <Border BorderThickness="0" BorderBrush="Black" CornerRadius="25" Background="{TemplateBinding Background}">
+                                            <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                        </Border>
+                                    </ControlTemplate>
+                                </Button.Template>
+                                <StackPanel Margin="-30,10,0,10" Orientation="Horizontal" >
+                                    <TextBlock  Text="&#xe67b;"  FontFamily="/WpfApp1;component/Fonts/#iconfont"  VerticalAlignment="Center" Foreground="White" FontSize="36"/>
+                                    <TextBlock Text="通知" Margin="20,0,0,0" Foreground="White" FontSize="20"  VerticalAlignment="Center"/>
+                                </StackPanel>
+                            </Button>
+
+                            <Button Style="{StaticResource qw}" Margin="0,10,0,10">
+                                <Button.Template>
+                                    <ControlTemplate TargetType="{x:Type Button}">
+                                        <Border BorderThickness="0" BorderBrush="Black" CornerRadius="25" Background="{TemplateBinding Background}">
+                                            <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                        </Border>
+                                    </ControlTemplate>
+                                </Button.Template>
+                                <StackPanel Margin="-30,10,0,10" Orientation="Horizontal" >
+                                    <TextBlock  Text="&#xe67b;"  FontFamily="/WpfApp1;component/Fonts/#iconfont"  VerticalAlignment="Center" Foreground="White" FontSize="36"/>
+                                    <TextBlock Text="存款" Margin="20,0,0,0" Foreground="White" FontSize="20"  VerticalAlignment="Center"/>
+                                </StackPanel>
+                            </Button>
+                            <Button Style="{StaticResource qw}" Margin="0,10,0,10">
+                                <Button.Template>
+                                    <ControlTemplate TargetType="{x:Type Button}">
+                                        <Border BorderThickness="0" BorderBrush="Black" CornerRadius="25" Background="{TemplateBinding Background}">
+                                            <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                        </Border>
+                                    </ControlTemplate>
+                                </Button.Template>
+                                <StackPanel Margin="-30,10,0,10" Orientation="Horizontal" >
+                                    <TextBlock  Text="&#xe67b;"  FontFamily="/WpfApp1;component/Fonts/#iconfont"  VerticalAlignment="Center" Foreground="White" FontSize="36"/>
+                                    <TextBlock Text="记录" Margin="20,0,0,0" Foreground="White" FontSize="20"  VerticalAlignment="Center"/>
+                                </StackPanel>
+                            </Button>
+
+                            <Button Style="{StaticResource qw}" Margin="0,10,0,10">
+                                <Button.Template>
+                                    <ControlTemplate TargetType="{x:Type Button}">
+                                        <Border BorderThickness="0" BorderBrush="Black" CornerRadius="25" Background="{TemplateBinding Background}">
+                                            <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                        </Border>
+                                    </ControlTemplate>
+                                </Button.Template>
+                                <StackPanel Margin="-30,10,0,10" Orientation="Horizontal" >
+                                    <TextBlock  Text="&#xe67b;"  FontFamily="/WpfApp1;component/Fonts/#iconfont"  VerticalAlignment="Center" Foreground="White" FontSize="36"/>
+                                    <TextBlock Text="消息" Margin="20,0,0,0" Foreground="White" FontSize="20"  VerticalAlignment="Center"/>
+                                </StackPanel>
+                            </Button>
+                            <Button Style="{StaticResource qw}" Margin="0,10,0,10">
+                                <Button.Template>
+                                    <ControlTemplate TargetType="{x:Type Button}">
+                                        <Border BorderThickness="0" BorderBrush="Black" CornerRadius="25" Background="{TemplateBinding Background}">
+                                            <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                        </Border>
+                                    </ControlTemplate>
+                                </Button.Template>
+                                <StackPanel Margin="-30,10,0,10" Orientation="Horizontal" >
+                                    <TextBlock  Text="&#xe67b;"  FontFamily="/WpfApp1;component/Fonts/#iconfont"  VerticalAlignment="Center" Foreground="White" FontSize="36"/>
+                                    <TextBlock Text="监控" Margin="20,0,0,0" Foreground="White" FontSize="20"  VerticalAlignment="Center"/>
+                                </StackPanel>
+                            </Button>
+                            <Border BorderBrush="Gray" BorderThickness="0,0,0,1" Margin="20,0,20,0"/>
+                            <Button Style="{StaticResource qw}" Margin="0,10,0,10">
+                                <Button.Template>
+                                    <ControlTemplate TargetType="{x:Type Button}">
+                                        <Border BorderThickness="0" BorderBrush="Black" CornerRadius="25" Background="{TemplateBinding Background}">
+                                            <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                        </Border>
+                                    </ControlTemplate>
+                                </Button.Template>
+                                <StackPanel Margin="-30,10,0,10" Orientation="Horizontal" >
+                                    <TextBlock  Text="&#xe67b;"  FontFamily="/WpfApp1;component/Fonts/#iconfont"  VerticalAlignment="Center" Foreground="White" FontSize="36"/>
+                                    <TextBlock Text="退出" Margin="20,0,0,0" Foreground="White" FontSize="20"  VerticalAlignment="Center"/>
+                                </StackPanel>
+                            </Button>
+                        </StackPanel>
+                    </Grid>
+                </Grid>
+            </Border>
+            <Border  CornerRadius="0,15,15,0" Grid.Column="1" Background="#3e3a65">
+                <Grid >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <StackPanel Margin="0,20,0,0">
+                        <Border Panel.ZIndex="1" Padding="20,10,20,10" Margin="50,10,50,0" Background="#7595fe" CornerRadius="12">
+                            <StackPanel>
+                                <StackPanel>
+                                    <StackPanel>
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition/>
+                                                <ColumnDefinition Width="3*"/>
+                                            </Grid.ColumnDefinitions>
+                                            <TextBlock  Text="&#xe67b;"  FontFamily="/WpfApp1;component/Fonts/#iconfont"  VerticalAlignment="Center" Foreground="White" FontSize="36"/>
+
+                                            <StackPanel HorizontalAlignment="Right" Grid.Column="1" Orientation="Horizontal">
+                                                <TextBlock  Text="&#xe67b;"  FontFamily="/WpfApp1;component/Fonts/#iconfont"  VerticalAlignment="Center" Foreground="White" FontSize="36"/>
+                                                <TextBlock Text="钱包夹" Margin="10,0,10,0" VerticalAlignment="Center" Foreground="White" FontSize="18" FontWeight="Bold"/>
+                                            </StackPanel>
+                                        </Grid>
+                                    </StackPanel>
+
+                                    <TextBlock  Text="5678      9087     1234     4567" FontSize="18" Foreground="White" FontWeight="Bold" Margin="0,20,0,0" />
+
+                                    <TextBlock Text="￥114514" FontWeight="Bold" FontSize="29" Foreground="White" Margin="0,30,0,0"/>
+                                </StackPanel>
+                            </StackPanel>
+                        </Border>
+                        <Border Padding="20"  Margin="23,-40,23,0" Background="#362f54" CornerRadius="12">
+                            <StackPanel >
+                                <TextBlock Text="流水" HorizontalAlignment="Center" FontSize="38" FontWeight="Bold" Foreground="White" Margin="0,80,0,50"/>
+                                <StackPanel>
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition/>
+                                            <ColumnDefinition/>
+                                        </Grid.ColumnDefinitions>
+                                        <TextBlock Text="支出" HorizontalAlignment="Center" Foreground="White"/>
+                                        <Border BorderBrush="#649ada" BorderThickness="0,0,0,1" Margin="0,30,0,0"/>
+                                        <TextBlock Grid.Column="1" Text="申请" HorizontalAlignment="Center" Foreground="White"/>
+                                    </Grid>
+                                </StackPanel>
+                                <TextBlock Text="付款码" Foreground="White" Margin="0,20,0,20" FontSize="18"/>
+                                <Border Background="#3f365f" CornerRadius="15">
+                                    <TextBlock Text="326478ashdghasjdgahjsgas" Foreground="White" HorizontalAlignment="Center"/>
+
+                                </Border>
+                                <TextBlock Text="请输入电子邮件" Foreground="White" Margin="0,15,0,0" HorizontalAlignment="Center"/>
+
+                                <StackPanel Margin="0,20,0,0">
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition/>
+                                            <ColumnDefinition/>
+                                        </Grid.ColumnDefinitions>
+                                        <StackPanel Margin="0,0,10,0">
+                                            <TextBlock Text="金额" Foreground="White" Margin="0,10,0,10"/>
+                                            <Border Background="#3f365f" CornerRadius="15">
+                                                <TextBlock Text="￥300" Foreground="White"/>
+                                            </Border>
+                                        </StackPanel>
+                                        <StackPanel Grid.Column="1" Margin="10,0,0,0">
+                                            <TextBlock Text="原因" Foreground="White" Margin="0,10,0,10"/>
+                                            <Border Background="#3f365f" CornerRadius="15">
+                                                <TextBlock Text="买游戏" Foreground="White"/>
+                                            </Border>
+                                        </StackPanel>
+                                    </Grid>
+                                </StackPanel>
+
+
+                                <Button Style="{StaticResource we}" Margin="0,40,0,-5" Height="60" BorderThickness="0">
+                                    <Button.Template>
+                                        <ControlTemplate TargetType="{x:Type Button}">
+                                            <Border BorderThickness="0" BorderBrush="Black" CornerRadius="25" Background="{TemplateBinding Background}">
+                                                <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                            </Border>
+                                        </ControlTemplate>
+                                    </Button.Template>
+                                    <StackPanel Orientation="Horizontal">
+
+                                        <TextBlock  Text="&#xe67b;"  FontFamily="/WpfApp1;component/Fonts/#iconfont"  VerticalAlignment="Center" Foreground="White" FontSize="36"/>
+                                        <TextBlock Text="支付" VerticalAlignment="Center" FontSize="27" Foreground="White" FontWeight="Bold" Margin="5,0,5,0"/>
+                                    </StackPanel>
+
+                                </Button>
+
+                            </StackPanel>
+                        </Border>
+                    </StackPanel>
+
+                    <Grid Grid.Column="1">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+
+
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="1.6*"/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <TextBox HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="White" BorderThickness="0" Text="添加精选" Height="30" Background="#3b315b" FontWeight="Bold" Margin="0,30,0,0">
+                                <TextBox.Resources>
+                                    <Style TargetType="{x:Type Border}">
+                                        <Setter Property="CornerRadius" Value="3"/>
+                                    </Style>
+                                </TextBox.Resources>
+                            </TextBox>
+                            <StackPanel Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Bottom">
+
+                                <Border Background="#3b315b" Margin="20,0,10,0"  CornerRadius="4">
+                                    <TextBlock  Text="&#xe67b;"  FontFamily="/WpfApp1;component/Fonts/#iconfont"  VerticalAlignment="Center" Foreground="White" FontSize="30">
+
+                                    </TextBlock>
+                                </Border>
+                                <Border Background="#3b315b" Margin="20,0,0,0"  CornerRadius="4">
+                                    <TextBlock  Text="&#xe67b;"  FontFamily="/WpfApp1;component/Fonts/#iconfont"  VerticalAlignment="Center" Foreground="White" FontSize="30">
+                                    </TextBlock>
+                                </Border>
+                            </StackPanel>
+
+                        </Grid>
+                        <Grid Grid.Row="1">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="1.3*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="2*"/>
+                            </Grid.RowDefinitions>
+
+                            <Grid>
+                                <Border Background="#b47efc" CornerRadius="27" Margin="0,20,10,0">
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition/>
+                                            <ColumnDefinition Width="0.2*"/>
+                                        </Grid.ColumnDefinitions>
+
+                                        <StackPanel>
+                                            <TextBlock Text="收支" Foreground="White" FontWeight="Bold" FontSize="19" Margin="15"/>
+                                            <TextBlock Text="￥ 9,150,00" Foreground="White" FontWeight="Bold" FontSize="24" Margin="20"/>
+                                            <StackPanel Margin="20,20,0,0"  Orientation="Horizontal">
+                                                <TextBlock  Text="&#xe67b;"  FontFamily="/WpfApp1;component/Fonts/#iconfont"  VerticalAlignment="Center" Foreground="White" FontSize="36"/>
+                                                <TextBlock Text="钱包夹" Margin="10,0,10,0" VerticalAlignment="Center" Foreground="White" FontSize="22" FontWeight="Bold"/>
+                                                <TextBlock  Text="&#xe67b;"  FontFamily="/WpfApp1;component/Fonts/#iconfont"  VerticalAlignment="Center" Foreground="White" FontSize="36"/>
+                                                <TextBlock Text="钱包夹" Margin="10,0,10,0" VerticalAlignment="Center" Foreground="White" FontSize="22" FontWeight="Bold"/>
+                                            </StackPanel>
+                                        </StackPanel>
+                                        <StackPanel Grid.Column="1" HorizontalAlignment="Center" >
+                                            <TextBlock  Text="&#xe67b;" Margin="0,10,0,10" FontFamily="/WpfApp1;component/Fonts/#iconfont"  VerticalAlignment="Center" Foreground="White" FontSize="36"/>
+                                            <TextBlock  Text="&#xe67b;" Margin="0,10,0,10" FontFamily="/WpfApp1;component/Fonts/#iconfont"  VerticalAlignment="Center" Foreground="White" FontSize="36"/>
+                                        </StackPanel>
+                                    </Grid>
+                                </Border>
+                            </Grid>
+
+                            <Grid Grid.Row="1">
+
+                                <Border Background="#362f54" CornerRadius="28" Margin="0,20,10,0">
+
+
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition/>
+                                            <ColumnDefinition Width="0.2*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <StackPanel>
+                                            <TextBlock Margin="20" Text="信息" Foreground="White" FontWeight="Bold" FontSize="20"/>
+                                            <TextBlock Margin="20,0,0,0" Text="地址：四川" Foreground="White" FontWeight="Bold" FontSize="17"/>
+                                            <TextBlock Margin="20,20,0,0" Text="钱包ID：114514" Foreground="White" FontWeight="Bold" FontSize="17"/>
+                                        </StackPanel>
+                                        <TextBlock Grid.Column="1"  Text="&#xe67b;"  FontFamily="/WpfApp1;component/Fonts/#iconfont"  HorizontalAlignment="Center" Margin="0,20,0,0" Foreground="White" FontSize="36"/>
+
+                                    </Grid>
+                                </Border>
+                            </Grid>
+
+                            <Grid Grid.Row="2">
+                                <Border Background="#362f54" CornerRadius="30" Margin="0,10,10,10">
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition/>
+                                            <RowDefinition Height="0.4*"/>
+                                        </Grid.RowDefinitions>
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="0.4*"/>
+                                                <ColumnDefinition/>
+                                            </Grid.ColumnDefinitions>
+                                            <StackPanel HorizontalAlignment="Center" >
+                                                <TextBlock Margin="0,20,0,10" Text="资料" Foreground="White" FontWeight="Bold" FontSize="18"/>
+                                                <TextBlock Margin="0,20,0,10" Text="2FA已启用" Foreground="White" FontWeight="Bold" FontSize="18"/>
+                                                <TextBlock Margin="0,20,0,10" Text="Key" Foreground="White" FontWeight="Bold" FontSize="18"/>
+                                                <TextBlock Margin="0,20,0,10" Text="密码" Foreground="White" FontWeight="Bold" FontSize="18"/>
+                                            </StackPanel>
+                                            <Border Grid.Column="1" CornerRadius="30"  Margin="0,10,5,10">
+                                                <Border.Background>
+                                                    <ImageBrush ImageSource="http://xinzhuobu.com/wp-content/uploads/2022/01/20220127011.jpg" />
+                                                </Border.Background>
+                                            </Border>
+                                        </Grid>
+
+                                        <Button  Grid.Row="1" Style="{StaticResource we}" Background="#3d346b" Margin="10"  BorderThickness="0">
+                                            <Button.Template>
+                                                <ControlTemplate TargetType="{x:Type Button}">
+                                                    <Border BorderThickness="0" BorderBrush="Black" CornerRadius="20" Background="{TemplateBinding Background}">
+                                                        <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                                    </Border>
+                                                </ControlTemplate>
+                                            </Button.Template>
+                                            <StackPanel Orientation="Horizontal">
+
+                                                <TextBlock  Text="&#xe67b;"  FontFamily="/WpfApp1;component/Fonts/#iconfont"  VerticalAlignment="Center" Foreground="White" FontSize="36"/>
+                                                <TextBlock Text="登录" VerticalAlignment="Center" FontSize="27" Foreground="White" FontWeight="Bold" Margin="5,0,5,0"/>
+                                            </StackPanel>
+
+                                        </Button>
+                                    </Grid>
+                                </Border>
+                            </Grid>
+                        </Grid>
+                    </Grid>
+                </Grid>
+
+
+            </Border>
+        </Grid>
+    </Grid>
+</Window>

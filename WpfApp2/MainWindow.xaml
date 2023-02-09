@@ -1,0 +1,16 @@
+﻿<Window x:Class="WpfApp2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <TextBlock Text="{Binding Name}"/>
+        <Button Content="点我" Width="50" Height="50" Command="{Binding edc}"/>
+        <!--CommandParameter前端向后端传参-->
+        <Button Content="点我关闭窗口" CommandParameter="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=Window}}" Width="50" Height="50" Margin="0,-240,0,0" Command="{Binding close}"/>
+        <Button Content="我要拿数据" Width="50" Height="50" Margin="0,140,0,0" Command="{Binding nashuju}"/>
+    </Grid>
+</Window>

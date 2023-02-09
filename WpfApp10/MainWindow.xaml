@@ -1,0 +1,181 @@
+﻿<Window
+    x:Class="WpfApp10.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:WpfApp10"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="MainWindow"
+    Width="800"
+    Background="Transparent"
+    Height="530"
+    mc:Ignorable="d">
+    <Window.Resources>
+        <Style x:Key="qw" TargetType="Button">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#202039"/>
+
+                </Trigger>
+            </Style.Triggers>
+
+        </Style>
+    </Window.Resources>
+    <Grid>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.4*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid Background="#3a2f55">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.2*"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <TextBlock  Text="&#xe67b;" Foreground="White" FontFamily="/WpfApp10;component/Fonts/#iconfont" FontSize="26"/>
+                <TextBlock Text="Wally" Foreground="White" FontWeight="Bold" FontSize="17" Margin="10,0,0,0" VerticalAlignment="Center"/>
+            </StackPanel>
+
+            <StackPanel Grid.Row="1">
+
+                <Button  Background="#202039"  Width="170" Margin="0,20,0,20" Height="45"  BorderThickness="0">
+                    <Button.Template>
+                        <ControlTemplate TargetType="{x:Type Button}">
+                            <Border BorderThickness="0" BorderBrush="Black" CornerRadius="7" Background="{TemplateBinding Background}">
+                                <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                    <StackPanel  Width="170"  Orientation="Horizontal" HorizontalAlignment="Left">
+                        <TextBlock Margin="10,0,0,0" Text="&#xe67b;" Foreground="White" FontFamily="/WpfApp10;component/Fonts/#iconfont" FontSize="16" VerticalAlignment="Center"/>
+                        <TextBlock Text="Wally" Foreground="White"  FontSize="12" Margin="10,0,0,0" VerticalAlignment="Center"/>
+                        <TextBlock Text=">" HorizontalAlignment="Right" Foreground="White" Margin="80,0,0,0"/>
+                    </StackPanel>
+                </Button>
+
+                <Button Style="{StaticResource qw}"  Width="170" BorderThickness="0" Height="45"   Margin="0,20,0,20">
+                    <Button.Template>
+                        <ControlTemplate TargetType="{x:Type Button}">
+                            <Border BorderThickness="0" BorderBrush="Black" CornerRadius="7" Background="{TemplateBinding Background}">
+                                <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                    <StackPanel  Width="170" Height="35" HorizontalAlignment="Left" Orientation="Horizontal">
+                        <TextBlock Margin="10,0,0,0" Text="&#xe67b;" Foreground="White" FontFamily="/WpfApp10;component/Fonts/#iconfont" FontSize="16" VerticalAlignment="Center"/>
+
+                        <TextBlock Text="76897" Margin="10,0,0,0" Foreground="White" VerticalAlignment="Center" FontSize="14"/>
+                    </StackPanel>
+                </Button>
+                <Button Style="{StaticResource qw}" BorderThickness="0" Width="170" Height="45"  Margin="0,20,0,20">
+                    <Button.Template>
+                        <ControlTemplate TargetType="{x:Type Button}">
+                            <Border BorderThickness="0" BorderBrush="Black" CornerRadius="7" Background="{TemplateBinding Background}">
+                                <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                    <StackPanel  Width="170" Height="35" HorizontalAlignment="Left" Orientation="Horizontal">
+                        <TextBlock Margin="10,0,0,0" Text="&#xe67b;" Foreground="White" FontFamily="/WpfApp10;component/Fonts/#iconfont" FontSize="16" VerticalAlignment="Center"/>
+
+                        <TextBlock Text="sdfsdf" Margin="10,0,0,0" Foreground="White" VerticalAlignment="Center" FontSize="14"/>
+                    </StackPanel>
+                </Button>
+                <Button Style="{StaticResource qw}" BorderThickness="0" Width="170" Height="45"  Margin="0,20,0,20">
+                    <Button.Template>
+                        <ControlTemplate TargetType="{x:Type Button}">
+                            <Border BorderThickness="0" BorderBrush="Black" CornerRadius="7" Background="{TemplateBinding Background}">
+                                <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                    <StackPanel  Width="170" Height="35" HorizontalAlignment="Left" Orientation="Horizontal">
+                        <TextBlock Margin="10,0,0,0" Text="&#xe67b;" Foreground="White" FontFamily="/WpfApp10;component/Fonts/#iconfont" FontSize="16" VerticalAlignment="Center"/>
+
+                        <TextBlock Text="sdfsdf" Margin="10,0,0,0" Foreground="White" VerticalAlignment="Center" FontSize="14"/>
+                    </StackPanel>
+                </Button>
+                <Border BorderBrush="Gray" BorderThickness="0,0,0,1" Margin="20,0,20,0"/>
+                <Button Style="{StaticResource qw}"  BorderThickness="0" Width="170" Height="45"  Margin="0,20,0,20">
+                    <Button.Template>
+                        <ControlTemplate TargetType="{x:Type Button}">
+                            <Border BorderThickness="0" BorderBrush="Black" CornerRadius="7" Background="{TemplateBinding Background}">
+                                <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                    <StackPanel  Width="170" Height="35" HorizontalAlignment="Left" Orientation="Horizontal">
+                        <TextBlock Margin="10,0,0,0" Text="&#xe67b;" Foreground="White" FontFamily="/WpfApp10;component/Fonts/#iconfont" FontSize="16" VerticalAlignment="Center"/>
+
+                        <TextBlock Text="sdfsdf" Margin="10,0,0,0" Foreground="White" VerticalAlignment="Center" FontSize="14"/>
+                    </StackPanel>
+                </Button>
+
+            </StackPanel>
+        </Grid>
+
+        <Grid Grid.Column="1" Background="#363054">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <UniformGrid Columns="2">
+                <Border Margin="10" CornerRadius="6" Background="White">
+                    <StackPanel >
+                        <Border CornerRadius="10" Width="260" Height="130">
+                            <Border.Background>
+                                <ImageBrush ImageSource="https://xinzhuobu.com/wp-content/uploads/2022/01/20220127011th.jpg" Stretch="UniformToFill"/>
+                            </Border.Background>
+                        </Border>
+                        <TextBlock Text="雷电将军" FontSize="15" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,10,0,0"/>
+                        <Border BorderBrush="Gray" BorderThickness="0,0,0,1" Margin="20,10,20,0"/>
+                        <TextBlock Text="预览图尺寸：1920×1080" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,10,0,0"/>
+                        <TextBlock Text="原图尺寸：3840 × 2160" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,10,0,0"/>
+                    </StackPanel>
+                </Border>
+                <Border Margin="10" CornerRadius="6" Background="White">
+                    <StackPanel >
+                        <Border CornerRadius="10" Width="260" Height="130">
+                            <Border.Background>
+                                <ImageBrush ImageSource="https://xinzhuobu.com/wp-content/uploads/2022/09/20220926006th.jpg" Stretch="UniformToFill"/>
+                            </Border.Background>
+                        </Border>
+                        <TextBlock Text="甘雨" FontSize="15" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,10,0,0"/>
+                        <Border BorderBrush="Gray" BorderThickness="0,0,0,1" Margin="20,10,20,0"/>
+                        <TextBlock Text="预览图尺寸：1920×1080" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,10,0,0"/>
+                        <TextBlock Text="原图尺寸：3840 × 2160" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,10,0,0"/>
+                    </StackPanel>
+                </Border>
+            </UniformGrid>
+            <Grid Grid.Row="1">
+                <UniformGrid Columns="2">
+                    <Grid Margin="5">
+                        <Border CornerRadius="10">
+                            <Border.Background>
+                                <ImageBrush ImageSource="https://xinzhuobu.com/wp-content/uploads/2022/09/20220926006th.jpg" Stretch="UniformToFill"/>
+                            </Border.Background>
+                        </Border>
+                    </Grid>
+                    <Grid Margin="5">
+                        <Border CornerRadius="10">
+                            <Border.Background>
+                                <ImageBrush ImageSource="https://xinzhuobu.com/wp-content/uploads/2022/03/20220310006th.jpg" Stretch="UniformToFill"/>
+                            </Border.Background>
+                        </Border>
+                    </Grid>
+                </UniformGrid>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>
